@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
-
+const PORT = process.env.PORT || 3001;
 // Middleware to allow frontend to connect
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://marketplace-pro.github.io');
