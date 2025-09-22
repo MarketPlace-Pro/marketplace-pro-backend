@@ -18,6 +18,9 @@ app.get('/api/test', (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Server is running on port ${PORT}`);
 });
+app.get('/api/products', (req, res) => {
+    res.json(products);
+});
 
 // Add this before app.listen()
 app.get('/api/products/featured', (req, res) => {
