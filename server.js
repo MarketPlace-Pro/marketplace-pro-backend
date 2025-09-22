@@ -29,3 +29,35 @@ app.get('/api/products/featured', (req, res) => {
         featured: ["Product A", "Product B", "Product C"]
     });
 });
+// Basic test route
+app.get('/api/test', (req, res) => {
+  res.json({ message: '🚀 Backend server is working!' });
+});
+
+// ⬇️ ADD THE PRODUCTS ENDPOINT RIGHT HERE ⬇️
+app.get('/api/products', (req, res) => {
+    const products = [
+        {
+            id: 1,
+            name: "Smartphone",
+            price: 299.99,
+            description: "Latest model smartphone"
+        },
+        {
+            id: 2,
+            name: "Laptop", 
+            price: 899.99,
+            description: "High-performance laptop"
+        },
+        {
+            id: 3,
+            name: "Headphones",
+            price: 149.99,
+            description: "Wireless noise-cancelling headphones"
+        }
+    ];
+    res.json(products);
+});
+
+// Start the server
+app.listen(PORT, () => {
