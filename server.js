@@ -45,6 +45,14 @@ app.get('/api/products/featured', (req, res) => {
         featured: ["Product A", "Product B", "Product C"]
     });
 });
+// Featured products endpoint
+app.get('/api/products/featured', (req, res) => {
+    res.json({
+        message: "Featured products endpoint working!",
+        featured: ["Product A", "Product B", "Product C"]
+    });
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`✅ Server is running on port ${PORT}`);
