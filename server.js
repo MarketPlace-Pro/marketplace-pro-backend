@@ -57,3 +57,23 @@ app.get('/api/products/featured', (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Server is running on port ${PORT}`);
 });
+
+// Add after your test route
+app.get('/api/products', (req, res) => {
+    res.json({
+        products: [
+            {id: 1, name: "Laptop", price: 999.99, category: "Electronics"},
+            {id: 2, name: "Phone", price: 699.99, category: "Electronics"},
+            {id: 3, name: "Book", price: 19.99, category: "Education"}
+        ]
+    });
+});
+
+app.get('/api/users', (req, res) => {
+    res.json({
+        users: [
+            {id: 1, name: "Alice", email: "alice@example.com"},
+            {id: 2, name: "Bob", email: "bob@example.com"}
+        ]
+    });
+});
